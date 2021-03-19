@@ -1,0 +1,81 @@
+@media screen and (max-width: 940px) {
+  .hero .mid h2 {
+    font-size: 18em;
+  }
+
+  .hero .mid img {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .hero .mid h2 {
+    font-size: 15em;
+  }
+
+  .hero .mid img {
+    width: 400px;
+  }
+
+  .hamb {display: block;}
+
+  header nav {
+    width: 100%;
+    height: 100vh;
+    background: #111;
+    padding: 40px 50px;
+
+    position: absolute;
+    top: 0;
+    left: 100%;
+    right: 0;
+    bottom: 0;
+
+    transition: .5s left;
+  }
+
+  header nav.click {left: 0%;}
+
+  header nav a {
+    display: block;
+    font-size: 2.3em;
+    color: #4e4e4e;
+    margin: 0px 0px 40px 0px;
+    padding: 0px;
+    transition: .3s color;
+  }
+
+  header nav a:hover {color: #fdfdfd;}
+
+  header nav a:before {content: none;}
+}
+
+@media screen and (max-width: 690px)  {
+  header .logo img {width: 70px;}
+
+  .hero .mid h2 {
+    font-size: 10em;
+    top: 30%;
+  }
+
+  .hero .mid img {
+    width: 300px;
+    top: 70%;
+  }
+}
+
+@media screen and (max-width: 540px)  {
+  .hero .mid h2 {
+    font-size: 7em;
+  }
+
+  .hero .mid img {
+    width: 220px;
+  }
+
+  .hero .container {
+    min-height: 100%;
+    position: relative;
+    padding: 10vh 0 100px;
+  }
+}

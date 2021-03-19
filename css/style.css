@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+/*google fonts*/
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5;
+
+  color: #212121;
+  overflow-x: hidden;
+
+  position: relative;
+}
+
+h1, h2 {
+  font-family: sans-serif;
+  line-height: 1.1;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: green;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*ends base styling*/
+
+.container {
+  width: 1280px;
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+/*ends public styling*/
+
+header {
+  width: 100%;
+  height: auto;
+  padding: 30px 0px 20px;
+  background: transparent;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+}
+
+header .container {  
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;  
+}
+
+header .logo {
+  max-width: auto; 
+}
+
+header .logo img {
+  width: 100px;
+  height: auto;
+}
+
+header nav a {
+  font-size: .95em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  margin: 0px 12px;
+  padding: 0px 8px 5px;
+
+  position: relative;
+}
+
+header nav a:before {
+  content: "";
+  border-bottom: 2px solid #fff;
+
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 110%;
+
+  transition: .3s right;
+}
+
+header nav a:hover:before {
+  right: 0%;
+}
+
+header .action button {
+  display: inline-block;
+  outline: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+header .action button i {
+  font-size: 1.1em;
+  color: #fff;
+}
+
+/*ends header*/
+
+.hero {
+  width: 100%;
+  height: 100vh;
+
+  background-color: #212121;
+  background-image: linear-gradient(95deg, #111111, #212121);
+
+  position: relative;
+}
+
+.hero .container {
+  min-height: 100%;
+  position: relative;
+  padding: 25vh 0 100px;
+}
+
+.hero .mid {
+  width: 100%;
+  max-width: 95%;
+  margin: 0 auto;
+  height: 600px;
+  position: relative;
+}
+
+.hero .mid h2 {
+  font-size: 20em;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-text-stroke: 3px #ea1300;
+  -webkit-text-fill-color: transparent;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.hero .mid img {
+  width: 500px;
+
+  filter: drop-shadow(0 15px 15px #00000080);
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-30deg);
+  z-index: 2;
+  animation: slide 1s ease;
+}
+
+@keyframes slide {
+  10% {
+    opacity: 0;
+    transform: translateY(-100px) translate(-50%, -50%) rotate(-30deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) translate(-50%, -50%) rotate(-30deg);
+  }
+}
+
+.hero .bottom {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hero .bottom a {
+  font-size: 1.1em;
+  letter-spacing: 1.2px;
+  color: #ea1300;
+}
+
+.hero .bottom a:hover {text-decoration: underline;}
+
+.hero .left-side {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%);
+}
+
+.hero .left-side a {
+  display: block;
+  font-size: 1.1em;
+  font-weight: 400;
+  color: #4e4e4e;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin: 100px 0px;
+  padding: 5px 15px 5px 0px;
+  transform: rotate(-90deg);
+}
+
+.hero .left-side a:hover {
+  background: red;
+  color: #fff;
+}
+
+.hero .left-side a.active {color: #fff;}
+
+.hero .right-side {
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translateY(-50%);
+}
+
+.hero .right-side a {
+  display: block;
+  font-size: 1.1em;
+  font-weight: 400;
+  color: #4e4e4e;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin: 50px 0px;
+  padding: 10px 30px 10px 10px;
+}
+
+.hero .right-side a:hover {
+  color: #fff;
+}
+
+.hero .right-side a.active {
+  background: red;
+  color: #fff;
+  font-weight: bold;
+}
+
+/*hero section ends*/
+
+.hamb {
+  width: 35px;
+  height: auto;
+  cursor: pointer;
+  display: none;
+
+  position: absolute;
+  top: 39px;
+  right: 65px;
+  z-index: 6;
+}
+
+.hamb span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+}
+
+.hamb span.mid {
+  margin: 7px 0;
+}
